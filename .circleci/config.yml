@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/analytics-react
+    working_directory: ~/rudder-analytics-react
     docker:
       - image: circleci/node:8.11
     steps:
