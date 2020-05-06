@@ -13,7 +13,7 @@ You can use either the minified or non-minified version of the code:
 The minified version is as follows:
 ```
 <script> 
-rudderanalytics=window.rudderanalytics=[];for(var methods=["load","page","track","alias","group","identify","ready","reset"],i=0;i<methods.length;i++){var method=methods[i];rudderanalytics[method]=function(d){return function(){rudderanalytics.push([d,...arguments])}}(method)}rudderanalytics.load("YOUR_WRITE_KEY","DATA_PLANE_URI"),rudderanalytics.page();
+rudderanalytics=window.rudderanalytics=[];for(var methods=["load","page","track","alias","group","identify","ready","reset"],i=0;i<methods.length;i++){var method=methods[i];rudderanalytics[method]=function(d){return function(){rudderanalytics.push([d,...arguments])}}(method)}rudderanalytics.load(<WRITE_KEY>,<DATA_PLANE_URL>),rudderanalytics.page();
 </script>
 
 <script  src="https://cdn.rudderlabs.com/v1/rudder-analytics.min.js"></script>
@@ -23,7 +23,7 @@ The non-minified version of the code is shown below:
 <script>
 	rudderanalytics = window.rudderanalytics = [];
 	
-	var  methods = [
+	var methods = [
 		"load",
 		"page",
 		"track",
@@ -42,16 +42,14 @@ The non-minified version of the code is shown below:
     			};
   			}(method);
 	}
-	rudderanalytics.load("YOUR_WRITE_KEY", "DATA_PLANE_URI");
-	//For example,
-	//rudderanalytics.load("1Qb1F3jSWv0eKFBPZcrM7ypgjVo", "http://localhost:8080");
+	rudderanalytics.load(<WRITE_KEY>, <DATA_PLANE_URL>);
 	rudderanalytics.page();
 </script>
 
 <script  src="https://cdn.rudderlabs.com/v1/rudder-analytics.min.js"></script>
 ```
 
-**NOTE**: Whichever version of the code you use, you need to replace `YOUR_WRITE_KEY` with the write key in the RudderStack Control Plane and `DATA_PLANE_URI` with the URI of the RudderStack Server/ Data Plane.
+**NOTE**: Whichever version of the code you use, you need to replace `WRITE_KEY` with the write key in the RudderStack Control Plane and `DATA_PLANE_URL` with the URI of the RudderStack Server/ Data Plane.
 
 You can also execute the min file in async/defer way, like:
 ```
@@ -59,7 +57,6 @@ You can also execute the min file in async/defer way, like:
 ```
 **NOTE**: We are moving our sdk to a diiferent path from the earlier https://cdn.rudderlabs.com/rudder-analytics.min.js to
 https://cdn.rudderlabs.com/v1/rudder-analytics.min.js. The earlier path may not be maintained in coming releases.
-
 
 ## Step 2: Identify your users using the `identify()` method:
 The `identify()` method allows you to link users and their actions to a specific userid.
@@ -78,7 +75,7 @@ rudderanalytics.identify(
           url: ""
         }
       },
-  () => {console.log("in identify call");}
+  () => { console.log("in identify call"); }
 );
 ```
 In the above example, information such as the user ID, email along with contextual information such as IP address, anonymousId, etc. will be captured.
@@ -145,8 +142,8 @@ rudderanalytics.ready(
 );
 ```
 # Adding callbacks to standard methods
-One can also define callbacks to common methods of  ```rudderanalytics``` object.
-***Note***: For now, the functionality is supported for ```syncPixel``` method which is called in Rudder SDK when making sync calls in integrations for relevant destinations.
+One can also define callbacks to common methods of  `rudderanalytics` object.
+***Note***: For now, the functionality is supported for `syncPixel` method which is called in Rudder SDK when making sync calls in integrations for relevant destinations.
 
 Ex:
 ```
@@ -165,7 +162,7 @@ rudderanalytics.syncPixelCallback = obj  => {
 In the above example, we are defining a  ```syncPixelCallback``` on the analytics object before the call to load the SDK. This will lead to calling of this registered callback with the parameter 
 ```{destination: <destination_name>}``` whenever a sync call is made from Rudder SDK for relevant integrations like *Lotame*.
 
-We will be adding similar callbacks for apis such as ```track, page, identify``` etc.
+We will be adding similar callbacks for apis such as `track, page, identify` etc.
 
 # Running your React Application
 
