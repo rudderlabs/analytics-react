@@ -169,14 +169,19 @@ We will be adding similar callbacks for apis such as ```track, page, identify```
 
 # Running your React Application
 
-Once you have succesfully installed our JS SDK, you are all set to send your tracking data to Rudder.
+Once you have succesfully installed our JS SDK, you are all set to send your tracking data to Rudder.All you need to do now is to install dependencies for your app and run it.
 
-To run the sample react application provided in this repository,run the following command from the repository's root folder -
+## Installing Dependencies
+Run the following command depending on whether you use `npm` or `yarn` to manage your packages -
 ```
-npm start
+npm install
 ```
-or if you wish to use `yarn`,
+OR
 ```
-yarn start
+yarn install
 ```
+## Running your Application
+
+To run your application, you need to run `npm start` or `yarn start` from your project's `root` directory.
+
 Your events would now appear in the live events section of your source
