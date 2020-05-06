@@ -5,7 +5,7 @@ import './App.css';
 
 class App extends Component {
   trackClickEvent(title) {
-    window.analytics.track(title);
+    window.rudderanalytics.track(title);
   }
 
   render() {

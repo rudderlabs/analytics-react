@@ -1,6 +1,6 @@
 {
-  "name": "analytics-react",
-  "description": "The hassle-free way to integrate analytics into your React application.",
+  "name": "rudder-analytics-react",
+  "description": "The hassle-free way to integrate Rudder analytics into your React application.",
   "version": "1.0.0",
   "contributors": [
     "William Grosset (https://williamgrosset.com)"
@@ -8,10 +8,10 @@
   "keywords": [
     "create-react-app",
     "react",
-    "segment",
+    "rudder",
     "analytics"
   ],
-  "repository": "segmentio/analytics-react",
+  "repository": "rudderlabs/rudder-analytics-react",
   "private": true,
   "scripts": {
     "start": "react-scripts start",

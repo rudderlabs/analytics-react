@@ -3,7 +3,7 @@ import logo from './logo.svg';
 
 export default class Home extends Component {
   componentDidMount() {
-    window.analytics.page('Home');
+    window.rudderanalytics.page('Home');
   }
 
   render() {

@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 
 beforeEach(() => {
-  global.window.analytics = { page: () => null };
+  global.window.rudderanalytics = { page: () => null };
 });
 
 afterEach(() => {
