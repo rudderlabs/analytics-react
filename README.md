@@ -1,7 +1,7 @@
 # What is RudderStack?
 Rudder is an enterprise-ready, open-source alternative to Segment, for collecting and routing customer event data. More information on Rudder can be found [here](https://github.com/rudderlabs/rudder-server).
 
-# 🔌 Installing on Your App
+# Installing on Your App
 Follow the steps below to install our JS SDK on your react app -
 
 ## Step 1: Install RudderStack using the code snippet
