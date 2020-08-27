@@ -5,7 +5,7 @@ import * as rudderanalytics from "rudder-js"
 
  export function rudderInitialize() {
     rudderanalytics.ready(() => {console.log("we are all set!!!")})
-    rudderanalytics.load("1dX54CojhrOqCYWGn7IFRXAr7R9", "http://localhost:8080",{configUrl:"https://api.dev.rudderlabs.com/sourceConfig"},{logLevel: "DEBUG", integrations:{All:true}})
+    rudderanalytics.load("YOUR_WRITE_KEY", "YOUR_DATAPLANE_URL",{{logLevel: "DEBUG", integrations:{All:true}})
 }
 
 export function eventIdentify() {
